@@ -1,0 +1,312 @@
+---
+layout: product
+---
+
+<div class="blog-posts">
+<!--Can't find substitution for tag [defaultAdStart]-->
+<div class='post-outer simpleCart_shelfItem'>
+<section class="post">
+<div itemscope="itemscope" itemtype="https://schema.org/Blog">
+<div itemscope="itemscope" itemtype="https://schema.org/Product">
+<meta content="{{ page.featured_image_path }}" itemprop="image"/>
+<meta content="{{ page.title }}" itemprop="name"/>
+<meta content="{{ page.description }}" itemprop="description"/>
+<meta content="{{ page.sku }}" itemprop="sku"/>
+<meta content="{{ page.mpn }}" itemprop="mpn"/>
+<meta content="{{ page.brand }}" itemprop="brand"/>
+<meta content="{{ page.image }}" itemprop="image"/>
+<meta content="{{ page.description }}" itemprop="description"/>
+<a id="{{ page.date | date: '%Y%m%d' }}"></a>
+<div class="post-body entry-content" id="post-body-{{ page.date | date: '%Y%m%d' }}">
+<meta content="{{site.baseurl}}{{ page.url }}" itemprop="url"/>
+<div class="judul-produk">
+<h1 class="post-title item_name entry-title" itemprop="name">{{ page.title }}</h1>
+</div>
+<!--============ ?? Gambar Produk -->
+<div class="gambar-produk">
+<img class="item_thumb" alt="{{page.title}}" src="{{ page.featured_image_path }}" style="display:none" />
+        <section class="product-image">
+            {% for image in page.styles %}
+<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %} class="item_thumb" style="display:none;"{% endunless %}><img alt="{{page.title}}" src="{{image.image_path}}" itemprop="image"/>
+</div>
+            {% endfor %}
+        </section>
+<!--============ ?? Status Produk -->
+<div class="status-produk">
+<div class="freeOngkir">{{page.discount}}</div>
+</div>
+</div>
+
+
+<!--============ ?? Harga -->
+<div class="detail-produk" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+<div content="IDR" itemprop="priceCurrency"></div>
+<div class="item_price" content="{{page.price}}" itemprop="price">{{page.price}}</div>
+</div>
+
+<!--============ ?? Rating -->
+<div class="rating-produk" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating">
+<span class="skor" itemprop="ratingValue">
+    <i class="fa fa-{{page.stars}}"></i> {{page.rating}}
+</span>
+<span class="rating" itemprop="reviewCount">{{page.review}}</span>
+</div>
+<div class="detail-produk">
+
+<!-- ============ ?? Pilihan Produk -->
+<ul class="opsi-produk style-picker" id="warna">
+            {% for warna in page.styles %} 
+<li id="product-{{ forloop.index }}" {% if forloop.first %} class="item_warna" {% endif %}>{{ warna.name }}</li>
+            {% endfor %}
+</ul>
+<ul class="opsi-produk" id="ukuran">
+            {% for size in page.sizes %} 
+<li id="product-{{ forloop.index }}" {% if forloop.first %} class="item_ukuran" {% endif %}>{{size}}</li>
+            {% endfor %}
+</ul>
+
+<!-- ============ ?? Detail Produk -->
+<div class="data-produk">
+<small>Info Produk</small>
+<!-- ============ ?? Berat -->
+<div class="pin">
+<dt>Berat</dt>
+<dd><b>{{page.berat}}</b></dd>
+</div>
+<!-- ============ ?? Kondisi -->
+<div class="pin">
+<dt>Kondisi</dt>
+<dd><b>{{page.condition}}</b></dd>
+</div>
+<!-- ============ ?? Barang Asal -->
+<div class="pin">
+<dt> Asal Barang</dt>
+<dd><b>{{page.barang}}</b></dd>
+</div>
+</div>
+</div>
+
+<!-- ============ ?? Penjelasan Produk -->
+<div class="deskripsi-produk">
+<section class="tabs">  
+<input checked="checked" class="tab-selector-1" id="tab-1" name="radio-set" type="radio">  
+<label class="tab-label-1" for="tab-1">Deskripsi</label>  
+<input class="tab-selector-2" id="tab-2" name="radio-set" type="radio">  
+<label class="tab-label-2" for="tab-2">Ulasan</label>  
+<input class="tab-selector-3" id="tab-3" name="radio-set" type="radio">  
+<label class="tab-label-3" for="tab-3">Privacy Policy</label> 
+<!-- ============ ?? Penjelasan Detail -->
+
+<div class="content">
+<div class="content-1"><!-- ============ ?? Penjelasan Text 1 -->
+{{ content }}
+</div>
+<div class="content-2"><!-- ============ ?? Penjelasan Text 2 -->
+{{page.ulasan}}
+</div>
+<div class="content-3"><!-- ============ ?? Penjelasan Text 2 -->
+{{site.privacy_policy}}
+</div>
+</div>
+</section>
+</div>
+<div style="clear: both;"></div>
+<div class="tombol-beli">
+<div class="beli-lewat-chat">
+<div id="admin">
+<img class=" ls-is-cached lazyloaded" itemprop="image" src="{{site.avatar}}">
+<div class="info-admin">
+<a href="" rel="author" title="author profile">
+<span itemprop="name">{{site.name}}</span></a>
+<p><!--Can't find substitution for tag [post.authorAboutMe]--></p>
+</div>
+<div class="follow-admin"><a class="daffadev-btn btnFollow" data-width="500" href="#follow">Follow</a>
+</div>
+</div>
+<div class="float-right">
+<div class="totalCart">Total :
+<span class="simpleCart_total"></span>
+</div>
+<!--<a class="daffadev-btn chat-wa" data-width="500" href="#buyWhatsapp" target="_top"><i aria-hidden="true" class="fa fa-whatsapp"></i></a>-->
+<a class="item_add" href="javascript:;" target="_top">Tambah ke Keranjang
+</a>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div id="share-container">
+<div id="share">
+<a class="facebook" href="https://www.facebook.com/sharer.php?u={{site.baseurl}}{{page.url}}" rel="nofollow" target="blank"><i class="fa fa-facebook"></i></a>
+<a class="twitter" href="https://twitter.com/share?url={{site.baseurl}}{{page.url}}" rel="nofollow" target="blank"><i class="fa fa-twitter"></i></a>
+<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.baseurl}}{{page.url}}&amp;title={{page.title}}&amp;summary=" rel="nofollow" target="blank"><i class="fa fa-linkedin"></i></a>
+<a class="pinterest" href="https://pinterest.com/pin/create/button/?url={{site.baseurl}}{{page.url}}&amp;media={{page.featured_image_path}}&amp;description={{page.description}}" rel="nofollow" target="blank"><i class="fa fa-pinterest-p"></i></a>
+<a class="whatsapp" data-action="share/whatsapp/share" href="https://api.whatsapp.com/send?text={{page.title}} | {{site.baseurl}}{{page.url}}"><i aria-hidden="true" class="fa fa-whatsapp"></i></a>
+</div>
+</div>
+<div class="related-post" id="related-post-{{ page.date | date: '%Y%m%d' }}"></div>
+<script>
+var labelArray = ["masker"];
+var relatedPostConfig = {
+    homePage: "{{site.baseurl}}",
+    widgetTitle: "<div class='judul-produk-lainnya'><h3></h3></div>",
+    numPosts: 5,
+    summaryLength: 0,
+    titleLength: "auto",
+    thumbnailSize: 300,
+    noImage: "https//3.bp.blogspot.com/-ltyYh4ysBHI/U04MKlHc6pI/AAAAAAAADQo/PFxXaGZu9PQ/w300-h375-c/no-image.png",
+    containerId: "related-post-{{ page.date | date: '%Y%m%d' }}",
+    newTabLink: false,
+    moreText: "Read More",
+    widgetStyle: 3,
+    callBack: function() {}
+};
+</script>
+<div class="daffadev" id="buyWhatsapp">
+<div class="wrap">
+<h3 class="title">
+<span class="title-content">Detail Pesanan</span>
+<a class="kantup" href="javascript:void(0)">×</a>
+</h3>
+<div class="content">
+<div class="daffadev-wrap">
+<div class="opsi-checkout">
+<div class="img">
+<img src="{{page.featured_image_path}}">
+</div>
+<div class="info">
+<h5 class="judul-p">{{page.title}}</h5>
+Sub Total : <span class="simpleCart_total"></span><br>
+<div class="opsi-pilihan">
+</div>
+</div>
+</div>
+<div class="chatWhatsapp formWA">
+<div class="grid-wa col2">
+<label class="item">
+<input class="nama wajib" placeholder="Nama Anda" type="text">
+<span class="validasi"><b>Nama Anda</b> Wajib isi..</span></label>
+<label class="item">
+<input class="email wajib" placeholder="Email" type="text">
+<span class="validasi"><b>Email</b> Wajib isi..</span></label>
+</div>
+<div class="grid-wa col2">
+<label class="item">
+<input class="kota wajib" placeholder="Kota" type="text">
+<span class="validasi"><b>Kota</b> Wajib isi..</span></label>
+<label class="item">
+<input class="kecamatan wajib" placeholder="Wilayah" type="text">
+<span class="validasi"><b>Wilayah</b> Wajib isi..</span></label>
+</div>
+<div class="grid-wa col2">
+<label class="item">
+<i class="panah"></i>
+<select class="provinsi wajib" placeholder="Provinsi">
+<option hidden="hidden" selected="selected" value="default">Pilih Provinsi</option>
+<optgroup label="Provinsi">
+<option value="Bali">Bali</option>
+<option value="Bangka Belitung">Bangka Belitung</option>
+<option value="Banten">Banten</option>
+<option value="Bengkulu">Bengkulu</option>
+<option value="D.I Yogyakarta">D.I Yogyakarta</option>
+<option value="DKI Jakarta">DKI Jakarta</option>
+<option value="Gorontalo">Gorontalo</option>
+<option value="Jambi">Jambi</option>
+<option value="Jawa Barat">Jawa Barat</option>
+<option value="Jawa Tengah">Jawa Tengah</option>
+<option value="Jawa Timur">Jawa Timur</option>
+<option value="Kalimantan Barat">Kalimantan Barat</option>
+<option value="Kalimantan Selatan">Kalimantan Selatan</option>
+<option value="Kalimantan Tengah">Kalimantan Tengah</option>
+<option value="Kalimantan Timur">Kalimantan Timur</option>
+<option value="Kalimantan Utara">Kalimantan Utara</option>
+<option value="Kepulauan Riau">Kepulauan Riau</option>
+<option value="Lampung">Lampung</option>
+<option value="Maluku">Maluku</option>
+<option value="Maluku Utara">Maluku Utara</option>
+<option value="Nanggaroe Aceh Darrussalam">Nanggaroe Aceh Darrussalam</option>
+<option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+<option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+<option value="Papua">Papua</option>
+<option value="Papua Barat">Papua Barat</option>
+<option value="Riau">Riau</option>
+<option value="Maluku">Maluku</option>
+<option value="Maluku Utara">Maluku Utara</option>
+<option value="Sulawesi Barat">Sulawesi Barat</option>
+<option value="Sulawesi Selatan">Sulawesi Selatan</option>
+<option value="Sulawesi Tengah">Sulawesi Tengah</option>
+<option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+<option value="Sulawesi Utara">Sulawesi Utara</option>
+</optgroup>
+</select>
+<span class="validasi"><b>Select Country</b> Wajib isi..</span></label>
+<label class="item">
+<input class="kodepos wajib" placeholder="Kode Pos" type="tel">
+<span class="validasi"><b>Kode Pos</b> Wajib isi..</span></label>
+</div>
+<br>
+<label class="item">
+<textarea class="alamat wajib" placeholder="Alamat"></textarea>
+<span class="validasi"><b>Alamat</b> Wajib isi..</span></label>
+<div class="grid-wa col2">
+<label class="item">
+<i class="panah"></i>
+<select class="pengiriman wajib" placeholder="Pilih Pengiriman">
+<option hidden="hidden" selected="selected" value="default">Pilih Pengiriman</option>
+<optgroup label="Pengiriman">
+<option value="Bayar di Tempat">Bayar di Tempat</option>
+<option value="JNE">JNE</option>
+<option value="JNT">JNT</option>
+<option value="TIKI">TIKI</option>
+<option value="Grab">Grab</option>
+<option value="SiCepat">SiCepat</option>
+<option value="Ninja Xpress">Ninja Xpress</option>
+<option value="Pos Indonesia">Pos Indonesia</option>
+<option value="Anteraja">Anteraja</option>
+<option value="Gosend">Gosend</option>
+<option value="JT Express">J&amp;T Express</option>
+</optgroup>
+</select>
+<span class="validasi"><b>Pilih Pengiriman</b> Wajib isi..</span></label>
+<label class="item"><i class="panah"></i>
+<select class="bank wajib" placeholder="Pilih Pembayaran">
+<option hidden="hidden" selected="selected" value="default">Pilih Pembayaran</option>
+<optgroup label="Chose Payment"><option value="BANK 1%0A123456789 - NAME SELLER">BANK 1 - 123456789 - NAME SELLER</option><option value="BANK 2%0A123456789 - NAME SELLER">BANK 2 - 123456789 - NAME SELLER</option><option value="BANK 3%0A123456789 - NAME SELLER">BANK 3 - 123456789 - NAME SELLER</option><option value="BANK 4%0A123456789 - NAME SELLER">BANK 4 - 123456789 - NAME SELLER</option></optgroup>
+</select>
+<span class="validasi"><b>Pilih Pembayaran</b> Wajib isi..</span></label>
+</div>
+<br>
+<label class="item">
+<textarea class="catatan wajib" placeholder="Catatan untuk Penjual"></textarea>
+<span class="validasi"><b>Catatan untuk Penjual</b> Wajib isi..</span></label>
+<br>
+<a class="submit">Pesan</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+	</div>
+    
+<div style="clear: both;"></div>
+</div></section>
+<div id="wpac-comment"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Comment', id:21957});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://cdn.statically.io/gh/daffadev/Disqus/c77ff57d/js-review.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+</div>
+<!--Can't find substitution for tag [adEnd]-->
+<div class="clear"></div>
+</div>
+

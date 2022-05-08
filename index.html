@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+        {% for product in site.products %}
+      <main class="post-outer ">
+          <section class="post" itemscope itemtype="http://schema.org/Product">
+
+        		<div class="img-thumbnail">
+        			<a href="{{ product.url }}">
+        				<img class="lazyload item_thumb" src="{{ product.featured_image_path }}" itemprop="image">
+        			</a>
+        		</div>
+
+            <div class="produk-info-container">
+              <h2 class="post-title judul-produk entry-title" itemprop="name">
+			          <a href="{{ product.url }}" itemprop="url">{{ product.title }}</a>
+              </h2><div class="detail-produk" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+<div content="IDR" itemprop="priceCurrency"></div>
+<div class="item_price" content="{{product.price}}" itemprop="price">{{product.price}}</div>
+</div><div class="rating-produk" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating">
+<span class="skor" itemprop="ratingValue">
+ <i class="fa fa-{{product.stars}}"></i> {{product.rating}}
+</span>
+<span class="rating" itemprop="reviewCount">{{product.review}}</span>
+</div>
+						</div>
+
+          </section>
+      </main>
+        {% endfor %}
