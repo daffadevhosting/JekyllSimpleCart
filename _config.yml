@@ -8,6 +8,8 @@ phone: 0810000000
 ph: 021000000
 address: Jl. Jalan Rt.0001/00002
 
+baseurl: /JekyllSimpleCart/
+
 # Jekyll Configuration
 encoding: UTF-8
 permalink: /:title
