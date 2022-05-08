@@ -1,6 +1,7 @@
 # Site Settings
 title: JekyllCart
 description: A Jekyll Based Shopping Cart Built with simpleCart(js)
+avatar: /assets/images/404.jpg
 url:
 modder: DaffaDev
 mail: namamu@mail.com

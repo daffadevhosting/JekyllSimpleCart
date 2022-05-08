@@ -1,15 +1,18 @@
-- name: C.O.D
-  value: C.O.D
+- name: JNT
+  value: JNT
 
 - name: JNE
   value: JNE
 
-- name: JNT
-  value: JNT
+- name: NinjaExpress
+  value: NinjaExpress
 
-- name: GRABexpress
-  value: GrabExpress
+- name: AnterAja
+  value: AnterAja
 
-- name: GOsend
-  value: GOsend
+- name: GRABexpress**
+  value: GrabExpress**
+
+- name: GOsend**
+  value: GOsend**
 
