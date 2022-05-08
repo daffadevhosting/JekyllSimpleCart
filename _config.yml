@@ -2,13 +2,13 @@
 title: JekyllCart
 description: A Jekyll Based Shopping Cart Built with simpleCart(js)
 avatar: /assets/images/404.jpg
-url:
+url: https://jekyllsimplecart.pages.dev
 modder: DaffaDev
 mail: namamu@mail.com
 phone: 0810000000
-ph: 021000000
+tlp: 021000000
 address: Jl. Jalan Rt.0001/00002
-note: Toko Sedang Libur Akhir Zaman
+note: Toko Sedang Liburan Akhir Zaman
 fork: https://github.com/daffadevhosting/JekyllSimpleCart.git
 
 baseurl: 
