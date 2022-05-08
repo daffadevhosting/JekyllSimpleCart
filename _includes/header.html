@@ -1,0 +1,191 @@
+	<header id='header-wrapper' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
+		<div class='header section' id='header'>
+			<div class='widget Header' data-version='2' id='Header1'>
+				<div class='header-widget'>
+					<a class='main-logo-img' href='{{site.baseurl}}/'>
+						<img alt='Project' class='lazyload' data-height='90' data-width='272' src='{{site.baseurl}}/assets/logo/logo.webp'/>
+					</a>
+				</div>
+			</div>
+		</div>
+<!-- MENU LINK -->
+<a class='icon_menu' href='javascript:void(0);' onclick='openNav();menuoverlayOn();addClassBody();' title='Menu'></a>
+	<nav>
+		<div class='cssmenu' id='mynav' itemscope='itemscope' itemtype='https://schema.org/SiteNavigationElement'>
+			<a class='homemobile' href='{{site.baseurl}}/' itemprop='item' title='Home'>
+			<span itemprop='name'>Home</span></a>
+				<div class='dropdown'>
+					<a class='ucihaItachi desktop' href='javascript:void(0);'>Kategori <i class='fa fa-angle-down'></i></a>
+						<div class='dropdown-content section' id='dropdown-content' name='Widget Profile'>
+							<div class='widget Label' data-version='2' id='Label1'>
+								<div class='widget-title'>
+									<h3 class='title'>
+									Label Dropdown
+									</h3>
+								</div>
+							<div class='widget-content list-label'>
+								<ul>
+								</ul>
+									<a class='allProduct' href='search49e5.html?max-results=12'><b>Semua</b> Produk <i class='fa fa-angle-right'></i></a>
+								<div class='closeUcihaItachi'></div>
+							</div>
+						</div>
+						</div>
+				</div>
+		</div>
+	<a class='closebtn' href='javascript:void(0)' onclick='closeNav()' title='close'></a>
+	</nav>
+<div id='menuoverlay' onclick='closeNav();menuoverlayOff();removeClassBody()'></div>
+<!-- MENU SEARCH -->
+	<div class='search-icon'>
+		<form action='{{site.url}}/search' id='search_mini_form' method='get'>
+		<input aria-label='Pencarian' autocomplete='off' class='input-search' name='q' placeholder='Cari produk di toko ini' type='text' value=''/>
+		<input name='max-results' type='hidden' value='0'/>
+		<i class='daffadev-tutup'></i>
+		<button class='button' title='Cari'><i></i></button>
+		</form>
+	</div>
+<!-- MENU LINK KANAN -->
+<div class='link-right'>
+<div class='cart'>
+<div class='menu-cart' id="cart-menu">
+<a class='daffadev-btn cart-btn' href='javascript:void(0)' title='Keranjang Belanja'>
+<span class='simpleCart_quantity up'><up></up></span><svg aria-label='cart' class='cart' role='img' tabindex='0' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M20.467 5c1.011 0 1.744.938 1.479 1.891l-1.823 6.528C19.697 14.942 18.28 16 16.663 16H8.926c-.939 0-1.758-.625-1.986-1.515L4.257 4H3.024A1.011 1.011 0 0 1 2 3c0-.553.458-1 1.024-1h2.062c.47 0 .879.312.993.758L6.654 5h13.813zM9 17.5a2 2 0 1 1 0 4.001A2 2 0 0 1 9 17.5zm8 0a2 2 0 1 1 0 4.001 2 2 0 0 1 0-4.001z'></path></svg></a>
+<div class='cart-box simplecart-cart'>
+    {% include keranjang.html %}
+<div class='ck-btn' style='margin-top:20px;'>
+<a class='view-cart' href='{{site.baseurl}}/cart'>CheckOut</a>
+</div>
+</div>
+<div class='cartUcihaItachi'></div>
+<div class='clear'></div>
+</div>
+</div>
+<div class='notif'><a class='daffadev-btn single btnNotif' data-width='500' href='#notifikasi' title='Notifikasi'><i class='icon-bell'></i>
+<up>1</up>
+</a>
+</div>
+<!-- MENU IMAGE -->
+<div class='tw_notif section' id='tw_notif' name='Notifikasi'>
+<div class='widget Image' data-version='2' id='Image1'>
+<div class='widget-title'>
+<h3 class='title'>
+Fork Template
+</h3>
+</div>
+<div class='widget-content'>
+<div class='daffadev' id='notifikasi'>
+<div class='wrap'>
+<h3 class='title'>
+<span class='title-content'><i class='icon-promosi'></i>
+jekyllCART 2.0 Template</span>
+<a class='kantup' href='javascript:void(0);'>&#215;</a></h3>
+<div class='content'>
+<div class='imgNotif'>
+<a href='#' srcset='{{site.baseurl}}/assets/images/underC.jpg'>
+<img alt='UnderConstruction' class='lazyload' height='523' id='Image1_img' src='{{site.baseurl}}/assets/images/underC.jpg' width='836'/>
+</a>
+</div>
+<div class='daffadev-wrap'>
+<span class='caption'>*under construction</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>//<![CDATA[
+var welcomeSession=sessionStorage.getItem("welcomeSession");
+if(welcomeSession===null){$(window).bind("load",function(){setTimeout(function(){$("#notifikasi").addClass("open");
+welcomeSession=sessionStorage.setItem("welcomeSession",true)},3000)})};
+//]]>
+</script>
+</div></div>
+<!-- PROFIL MENU -->
+<div class='tw_follow section' id='tw_follow' name='Ikuti'>
+<div class='widget Image' data-version='2' id='Image2'>
+<div class='widget-title'>
+<h3 class='title'>
+Tentang kami!
+</h3>
+</div>
+<div class='daffadev' id='follow'>
+<div class='wrap'>
+<h3 class='title'>
+<span class='title-content'>
+<i class='icon ion-md-checkmark-circle'></i>
+Tentang kami!</span>
+<a class='kantup' href='javascript:void(0);'>&#215;</a>
+</h3>
+<div class='content'>
+<div class='imgFollow'>
+<img alt='Tentang kami!' class='lazyload' height='353' id='Image2_img' src='https://2.bp.blogspot.com/-2bmY9myvVjU/XZmbTLeONzI/AAAAAAAAA2s/Fb3rSvdvtQUsSPTapKTCCYn44CyDnccCgCK4BGAYYCw/s1600/dashboard-students.gif' width='670'/>
+<a href='/'>
+<figure><figcaption class='hide'></figcaption></figure>
+<script type='text/javascript'>
+$('.imgFollow figure').css('background-image', 'url('+ $('.header img').attr('src') +')');
+</script>
+</a>
+</div>
+<div class='daffadev-wrap'>
+<center>
+<h3>{{site.title}}</h3>
+<small class='caption'>{{site.description}}</small>
+</center>
+<br/>
+<div class='followBtn'></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- KONTAK FORM -->
+<div class='tw_form section' id='tw_form' name='Contact Form'><div class='widget ContactForm' data-version='2' id='ContactForm1'>
+<div class='widget-title'>
+<h3 class='title'>
+Formulir Kontak
+</h3>
+</div>
+<div class='contact-form-widget'>
+<div class='daffadev' id='form'>
+<div class='wrap'>
+<h3 class='title'>
+<span class='title-content'><i class='icon-envelope'></i>
+Formulir Kontak</span>
+<a class='kantup' href='javascript:void(0);'>&#215;</a></h3>
+<div class='content'>
+<form name='contact-form'>
+Name
+<div class='grid-wa col2'>
+<label>
+<input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' placeholder='Nama...' type='text' value=''/>
+Email
+<span style='font-weight: bolder;'>*</span>
+</label>
+<label>
+<input class='contact-form-email' id='ContactForm1_contact-form-email' name='email' placeholder='Email Anda...' type='text' value=''/>
+Message
+<span style='font-weight: bolder;'>*</span>
+</label>
+</div>
+<textarea class='contact-form-email-message' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' placeholder='Tulis pesan...' rows='5'></textarea>
+<p></p>
+<input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' type='button' value='Send'/>
+<p></p>
+<div style='text-align: center; max-width: 222px; width: 100%'>
+<p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
+<p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<div id='kekiri'>
+<div class='toko-profil no-items section' id='toko-profil' name='Contact Form'>
+</div>
+</div>
+<div class='clear'></div>
+</header>
+

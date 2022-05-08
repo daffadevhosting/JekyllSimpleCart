@@ -1,0 +1,17 @@
+- id: 20220421
+  url: /products/tiger
+  image: /images/products/tiger/black.jpg
+  title: Gavin the Tiger
+  price: '40.000'
+
+- id: 20220505
+  url: /products/deer
+  image: /images/products/deer/black.jpg
+  title: Sacha the Deer
+  price: '40.000'
+
+- id: 20220505
+  url: /products/giraffe
+  image: /images/products/giraffe/green.jpg
+  title: Gerald the Giraffe
+  price: '40.000'

@@ -1,0 +1,33 @@
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% if page.layout == "default" %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    {% endif %}
+    {% if page.url contains '/products/' %}
+    {% include product-css.html %}
+    {% endif %}
+    {% if page.url contains '/cart' %}
+    {% include cart-css.html %}
+    {% endif %}
+    {% if page.url contains '/checkout' %}
+    {% include checkout-css.html %}
+    {% endif %}
+<script async="async" src="https://cdn.staticaly.com/gh/daffadevhosting/js/rules/jquery-3.6.0.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+//<![CDATA[
+var no_whatsapp = "085886624531",
+    pesan_pembeli = "Assalamualaikum",
+    nama_penjual = "rian seo";
+//]]>
+</script>
+
+
+    <!-- Created with Jekyll -->
