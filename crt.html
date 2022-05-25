@@ -1,0 +1,184 @@
+---
+layout: checkout
+title: Checkout
+sitemap: false
+---
+<style>
+#wrapper {width:1000px}
+.left_side {float:left;width:60%;margin:0 0 20px 0}
+.Qdaffadev .formnameaddress{font-weight:bold;display:block;padding-bottom:14px;color:#31353b;border-bottom:1px solid #dbdee2}
+.QawasAdaSule{display:block;box-sizing:border-box;font-size:.928571rem;line-height:1.5;margin-top:16px;border-width:1px;border-style:solid;border-color:#dbdee2;border-image:initial;padding:10px 16px;border-radius:4px}button.picik-pacang-sakit{color:#fff;font-size:1rem;height:40px;line-height:20px;width:100%;font-weight:800;cursor:pointer;display:block;text-indent:initial;position:relative;border-radius:8px;outline:0;padding:0 16px;transition:background .8s ease 0s;background:radial-gradient(circle,transparent 1%,#03ac0e 1%) center center / 15000% #03ac0e;border:0}
+.simpleCart_items .headerRow, .simpleCart_items .item-thumb, .simpleCart_items .item-remove a.simpleCart_remove,.simpleCart_items .item-total{display:none}
+.daffadev .daffadev-wrap .simpleCart_items {float:none!important;width:100%;padding:0}
+.daffadev .daffadev-wrap .simpleCart_items .item-price,.daffadev .daffadev-wrap .simpleCart_items .item-quantity,.daffadev .daffadev-wrap .simpleCart_items .item-decrement,.daffadev .daffadev-wrap .simpleCart_items .item-increment, .simpleCart_items .headerRow .item-name {visibility: hidden;font-size: 0;}
+.daffadev .daffadev-wrap .simpleCart_items .item-name,.daffadev .daffadev-wrap .simpleCart_items td {padding: 8px 0!important;float: none;border-bottom: 1px solid #f7f7f7;}
+.daffadev .daffadev-wrap .simpleCart_items table {display:block;padding:0}
+.daffadev .daffadev-wrap .textT {font-size:13px}
+.daffadev .daffadev-wrap .textQ {border:0}
+/* RESPONSIVE */
+@media only screen and (max-width: 800px){
+#wrapper, .left_side, .right_side {width:100%;float:none;}
+.daffadev .daffadev-wrap .simpleCart_items .item-name {display:block;height: auto;}}
+</style>
+<script async='async' src='{{site.url}}/assets/js/js-link.min.js'></script>
+<div class='left_side'>
+<div class='Qdaffadev formtwo shippingto'>
+<span class='formnameaddress'>Pilih Wilayah Pengiriman</span>
+<label class='cityselect'>
+<select class='shippingQ' id='jekyllcart_shippingSelect' placeholder='Wilayah Pengiriman'>
+</select>
+</label>
+<div class='QawasAdaSule'>
+<small>Biaya <b>pengiriman Produk</b> akan di Hitung sesuai Wilayah, Pastikan pilih wilayah anda dengan benar. <a href='#'>Pelajari selengkapnya</a>
+</small>
+</div>
+</div>
+</div>
+<div class='right_side'>
+<div class='right_side_daffadev'>
+<div class='sidebar-heading-text'>Ringkasan Belanja</div>
+<div class='textQ'>
+<div class='textT'>
+<span>Total Harga </span>
+<span class='simpleCart_total'></span>
+</div>
+<div class='textT'>
+<span class='shippingc'>Total Ongkos Kirim </span>
+<b><span class='simpleCart_shipping'></span></b>
+</div>
+<div class='textT'>
+<span>Jumlah Barang </span>
+<b><span class='simpleCart_quantity'></span></b>
+</div>
+<div class='policyQ'>Dengan ini, Saya menyetujui <a href='terms-of-service.html'>syarat dan ketentuan yang berlaku</a>.
+</div>
+</div>
+<div class='textQ'>
+<div class='textT'>
+<span><b>Total Bayaran</b>
+</span>
+<span class='simpleCart_grandTotal'></span>
+</div>
+</div>
+<button class='daffadev-btn picik-pacang-sakit' data-width='500' href='#CheckoutCart' target='_top'>Pesan</button>
+</div>
+</div>
+<div class='daffadev' id='CheckoutCart'>
+<div class='wrap'>
+<h3 class='title'>
+<span class='title-content'>Pesanan</span>
+<a class='kantup' href='javascript:void(0)'>&#215;</a>
+</h3>
+<div class='content'>
+<div class='daffadev-wrap'>
+<div class='simpleCart_items'></div>
+<div class='textQ'>
+<div class='textT'>
+<span>Total Harga (<span class='simpleCart_quantity'>0</span> Produk)</span>
+<span class='simpleCart_total'>0</span>
+</div>
+<div class='textT'>
+<span>Total Tagihan </span>
+<b><span class='simpleCart_grandTotal'>0</span></b>
+</div>
+<div class='textT'>
+<span>Ongkos Kirim </span>
+<b><span class='simpleCart_shipping'>0</span></b>
+</div>
+</div>
+<div class='chatWhatsapp formWA'>
+<div class='grid-wa col2'>
+<label class='item'>
+<input class='nama wajib' placeholder='Nama Anda' type='text'/>
+</label>
+<label class='item'>
+<input class='email wajib' placeholder='Email' type='text'/>
+</label>
+</div>
+<div class='grid-wa col2'>
+<label class='item'>
+<input class='kota wajib' placeholder='Kota' type='text'/>
+</label>
+<label class='item'>
+<input class='kecamatan wajib' placeholder='Wilayah' type='text'/>
+</label>
+</div>
+<div class='grid-wa col2'>
+<label class='item'>
+<i class='panah'></i>
+<select class='provinsi wajib' placeholder='Select Country'>
+<option hidden='hidden' selected='selected' value='default'>Pilih Provinsi</option>
+<optgroup label='Provinsi'>
+<option value='Bali'>Bali</option>
+<option value='Bangka Belitung'>Bangka Belitung</option>
+<option value='Banten'>Banten</option>
+<option value='Bengkulu'>Bengkulu</option>
+<option value='D.I Yogyakarta'>D.I Yogyakarta</option>
+<option value='DKI Jakarta'>DKI Jakarta</option>
+<option value='Gorontalo'>Gorontalo</option>
+<option value='Jambi'>Jambi</option>
+<option value='Jawa Barat'>Jawa Barat</option>
+<option value='Jawa Tengah'>Jawa Tengah</option>
+<option value='Jawa Timur'>Jawa Timur</option>
+<option value='Kalimantan Barat'>Kalimantan Barat</option>
+<option value='Kalimantan Selatan'>Kalimantan Selatan</option>
+<option value='Kalimantan Tengah'>Kalimantan Tengah</option>
+<option value='Kalimantan Timur'>Kalimantan Timur</option>
+<option value='Kalimantan Utara'>Kalimantan Utara</option>
+<option value='Kepulauan Riau'>Kepulauan Riau</option>
+<option value='Lampung'>Lampung</option>
+<option value='Maluku'>Maluku</option>
+<option value='Maluku Utara'>Maluku Utara</option>
+<option value='Nanggaroe Aceh Darrussalam'>Nanggaroe Aceh Darrussalam</option>
+<option value='Nusa Tenggara Barat'>Nusa Tenggara Barat</option>
+<option value='Nusa Tenggara Timur'>Nusa Tenggara Timur</option>
+<option value='Papua'>Papua</option>
+<option value='Papua Barat'>Papua Barat</option>
+<option value='Riau'>Riau</option>
+<option value='Maluku'>Maluku</option>
+<option value='Maluku Utara'>Maluku Utara</option>
+<option value='Sulawesi Barat'>Sulawesi Barat</option>
+<option value='Sulawesi Selatan'>Sulawesi Selatan</option>
+<option value='Sulawesi Tengah'>Sulawesi Tengah</option>
+<option value='Sulawesi Tenggara'>Sulawesi Tenggara</option>
+<option value='Sulawesi Utara'>Sulawesi Utara</option>
+</optgroup>
+</select>
+</label>
+<label class='item'>
+<i class='panah'></i>
+<select class='pengiriman wajib' placeholder='Pilih Pengiriman'>
+<option hidden='hidden' selected='selected' value='default'>Pilih Pengiriman</option>
+<optgroup label='Pengiriman'>
+<option value='Bayar di Tempat'>Bayar di Tempat</option>
+<option value='JNE'>JNE</option>
+<option value='JNT'>JNT</option>
+<option value='TIKI'>TIKI</option>
+<option value='Grab'>Grab</option>
+<option value='SiCepat'>SiCepat</option>
+<option value='Ninja Xpress'>Ninja Xpress</option>
+<option value='Pos Indonesia'>Pos Indonesia</option>
+<option value='Anteraja'>Anteraja</option>
+<option value='Gosend'>Gosend</option>
+<option value='JT Express'>J&T Express</option>
+</optgroup>
+</select>
+</label>
+</div>
+<br/>
+<label class='item'>
+<textarea class='alamat wajib' placeholder='Rumah / Jalan '></textarea>
+</label>
+<br/>
+<label class='item'>
+<textarea class='pesan_pembeli wajib' placeholder='Catatan Contoh Warna / Ukuran'></textarea>
+</label>
+<br/>
+<a class='submit s2'>Pesan</a>
+</div>
+</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+
