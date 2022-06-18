@@ -5,7 +5,7 @@ avatar: /assets/images/404.jpg
 url: https://jekyllsimplecart.pages.dev
 modder: DaffaDev
 mail: namamu@mail.com
-phone: 0810000000
+phone: 081386267897
 tlp: 021000000
 address: Jl. Jalan Rt.0001/00002
 note: Toko Sedang Liburan Akhir Zaman
@@ -15,7 +15,7 @@ baseurl:
 
 # Jekyll Configuration
 encoding: UTF-8
-permalink: /:title
+permalink: /:title/
 paginate: 10
 paginate_path: "/products/page/:num/"
 
@@ -27,7 +27,7 @@ kramdown:
 # Sass/SCSS settings
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 # Custom Collections
 collections:
@@ -83,7 +83,6 @@ jekyll-archives:
     tags: '/tag/:name/'
 
 # HTML Compression
-# - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
