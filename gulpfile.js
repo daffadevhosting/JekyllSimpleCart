@@ -8,7 +8,7 @@ var gulp        = require('gulp'),
 
 //* Scripts
 gulp.task('themejs', function() {
-  gulp.src(['./js/jquery*.js', './js/responsive-menu.js'])
+  gulp.src(['./js/jquery/jquery*.js', './js/like.js'])
     .pipe(concat('theme-concat.js'))
     .pipe(uglify())
     .pipe(rename({

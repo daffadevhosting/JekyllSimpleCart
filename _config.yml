@@ -62,10 +62,6 @@ sidebar_options:
   - sidebar
   - no-sidebar
 
-# File Handling
-# include: [_pages]
-exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json]
-
 # Plugins
 gems:
   - jekyll-feed
@@ -87,3 +83,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# File Handling
+# include: [_pages]
+exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json]
